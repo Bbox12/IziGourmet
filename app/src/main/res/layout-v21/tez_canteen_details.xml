@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    android:id="@+id/swipeToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:visibility="visible">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:visibility="visible"
+            app:elevation="0dp"
+            app:expanded="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:fitsSystemWindows="false"
+                app:collapsedTitleGravity="center_vertical|start"
+                app:contentScrim="@android:color/transparent"
+                app:expandedTitleGravity="bottom|center_horizontal"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:scrimAnimationDuration="1200"
+                app:titleEnabled="false">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbardd"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@android:color/transparent"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@mipmap/ic_izi" />
+
+                        <RelativeLayout
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end"
+                            android:background="@android:color/transparent"
+                            android:clipToPadding="false"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/_i4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/cart_dark" />
+
+                            <TextView
+                                android:id="@+id/orders"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignTop="@id/_i4"
+                                android:layout_gravity="right|end|top"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/badge_background"
+                                android:gravity="center"
+                                android:padding="3dp"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="10sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/Nscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:addStatesFromChildren="false"
+            android:alwaysDrawnWithCache="false"
+            android:background="@android:color/transparent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:id="@+id/_l1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top|center_vertical"
+                android:background="@android:color/transparent"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:elevation="3dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="false">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/editTextBackground"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:lines="5"
+                                android:minHeight="32dp"
+                                android:padding="3dp"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                            <com.android.volley.toolbox.NetworkImageView
+                                android:id="@+id/service_pic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/rl51"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="128dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="30dp"
+                            android:background="@drawable/button_failed"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical|center_horizontal|start"
+                            android:minEms="3"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/moreRv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/discount"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@android:color/transparent"
+                            android:padding="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar3_eats"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@xml/progress"
+            android:visibility="gone" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

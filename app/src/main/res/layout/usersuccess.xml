@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top"
+    android:id="@+id/success_"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ProgressBar
+            android:id="@+id/p1"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="false"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/blue_grey_900"
+            app:expanded="true">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_success"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/black"
+                app:layout_scrollFlags="enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/s1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:editable="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Your"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/s2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/s1"
+                        android:background="@android:color/transparent"
+                        android:editable="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Bill"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_success"
+            android:background="@color/white">
+
+
+            <LinearLayout
+                android:id="@+id/last1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/layoutbill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/black">
+
+                    <LinearLayout
+
+                        android:id="@+id/_L1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="R "
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="48sp" />
+
+                        <TextView
+
+                            android:id="@+id/bill_generated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="48sp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/_L1"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+                        android:gravity="start|center_vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/discountprice_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="false"
+                            android:layout_weight="0.25"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_horizontal|top"
+                            android:minEms="4"
+                            android:textColor="@color/blue_grey_400"
+                            android:textSize="24sp"
+                            android:visibility="visible" />
+
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="2dp"
+                            android:layout_alignParentLeft="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/red"
+                            android:foregroundGravity="center_vertical" />
+
+                    </RelativeLayout>
+                    <Button
+                        android:id="@+id/button_bill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center_horizontal|center"
+                        android:layout_marginRight="5dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="right|center"
+                        android:text="Show bill"
+                        android:textColor="@color/green_A400"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/collapse_round_corner"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/collapse_round_corner">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:padding="10dp"
+                                android:text="How was our delivery partner"
+                                android:textAlignment="gravity"
+                                android:textColor="@color/timestamp"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/driver_bill"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center_horizontal"
+                                android:padding="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <RatingBar
+                                android:id="@+id/ratingBarbill"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:numStars="5"
+                                android:stepSize="0.5" />
+
+                            <ImageView
+                                android:id="@+id/driver_bill"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_centerInParent="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+                                />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/success_ride"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

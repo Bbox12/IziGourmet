@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/savedlocation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="false"
+        android:gravity="center_vertical"
+        android:scrollbarSize="0dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="false"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ScrollView
+                android:id="@+id/s2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/editbox_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal"
+                        android:minEms="6"
+                        android:singleLine="true"
+                        android:text="Select your saved address"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:divider="@color/black"
+                        android:gravity="bottom|center_horizontal"
+                        android:minHeight="56dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="15dp"
+                        android:paddingBottom="3dp">
+
+
+                        <RadioButton
+                            android:id="@+id/savedhome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:layout_weight="0.25"
+                            android:ems="6"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical"
+                            android:text="HOME"
+                            android:textColor="@color/quantum_googgreen600"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/savedwork"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:layout_weight="0.25"
+                            android:ems="6"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical"
+                            android:text="WORK"
+                            android:textColor="@color/quantum_googgreen600"
+                            android:textSize="14sp" />
+
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:ems="6"
+                            android:gravity="center_vertical"
+                            android:text="Address"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/place_home_saved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:animateLayoutChanges="true"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center|start"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:background="@android:drawable/screen_background_light_transparent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:ems="6"
+                            android:gravity="center_vertical"
+                            android:text="House No"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/place_work_saved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:animateLayoutChanges="true"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center|start"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:ems="6"
+                            android:gravity="center_vertical"
+                            android:text="Land Mark"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/place_other_saved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:animateLayoutChanges="true"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center|start"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:ems="6"
+                            android:gravity="center_vertical"
+                            android:text="ZIP Code"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/place_zip_saved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:animateLayoutChanges="true"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center|start"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@+id/s2"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/ride_now_saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|end"
+                    android:background="@drawable/editt2"
+                    android:ems="6"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="Order now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/ride_cancel_saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|end"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:minEms="4"
+                    android:text="Back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

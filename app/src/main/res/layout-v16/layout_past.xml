@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:stateListAnimator="@null"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:src="@drawable/quantum_ic_arrow_back_grey600_24" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.6"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="start|center_vertical"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <RelativeLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:clipToPadding="false"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/_i4"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_orders" />
+
+                <TextView
+                    android:id="@+id/orders"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@id/_i4"
+                    android:layout_gravity="right|end|top"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/badge_background"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/_nscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar_main"
+        android:background="@drawable/leftcornerbackground"
+        android:fillViewport="true"
+        android:paddingTop="0dp"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:paddingTop="48dp">
+
+
+            <ProgressBar
+                android:id="@+id/progressBarpast"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/no_past"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="No orders placed"
+                android:textSize="18sp" />
+
+            <ExpandableListView
+                android:id="@+id/lvExp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:scrollbarSize="0dp" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        android:id="@+id/cor_home_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:visibility="visible"
+            app:elevation="0dp"
+            app:expanded="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                app:collapsedTitleGravity="center_vertical|start"
+                app:contentScrim="@color/black"
+                app:expandedTitleGravity="bottom|center_horizontal"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:scrimAnimationDuration="1200">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/black"
+                    android:gravity="center_vertical|center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_alignParentTop="false"
+                        android:layout_marginTop="56dp"
+                        android:background="@drawable/collapse_round_corner"
+                        android:gravity="top"
+                        android:orientation="horizontal" />
+
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbardd"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@android:color/transparent"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:addStatesFromChildren="false"
+            android:alwaysDrawnWithCache="false"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:fitsSystemWindows="false"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_black"
+                    android:gravity="start|top|center_vertical"
+                    android:minEms="4"
+                    android:padding="5dp"
+                    android:text="Set up your credit or debit card."
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="start"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_black"
+                    android:gravity="center_horizontal|top|center_vertical"
+                    android:minEms="4"
+                    android:padding="5dp"
+                    android:src="@drawable/debitcards" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp"
+                    android:textColorHint="@color/chef"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="First Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textNoSuggestions"
+                        android:lines="2"
+                        android:shadowColor="@color/white"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/white"
+                        android:textColorHint="@color/green_A400"
+                        android:textColorLink="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp"
+                    android:textColorHint="@color/chef"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Last Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textNoSuggestions"
+                        android:lines="2"
+                        android:shadowColor="@color/white"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/white"
+                        android:textColorHint="@color/green_A400"
+                        android:textColorLink="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp"
+                    android:textColorHint="@color/chef"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Card Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="textNoSuggestions"
+                        android:lines="2"
+                        android:shadowColor="@color/white"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/white"
+                        android:textColorHint="@color/green_A400"
+                        android:textColorLink="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp"
+                    android:textColorHint="@color/chef"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Expiry Date (MM/YY)"
+                        android:imeOptions="actionNext"
+                        android:inputType="textNoSuggestions"
+                        android:lines="2"
+                        android:shadowColor="@color/white"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/white"
+                        android:textColorHint="@color/green_A400"
+                        android:textColorLink="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp"
+                    android:textColorHint="@color/chef"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Security Code"
+                        android:imeOptions="actionNext"
+                        android:inputType="textNoSuggestions"
+                        android:lines="2"
+                        android:shadowColor="@color/white"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/white"
+                        android:textColorHint="@color/green_A400"
+                        android:textColorLink="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp"
+                    android:textColorHint="@color/chef"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/cash"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Pay by Cash"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:shadowColor="@color/white"
+                        android:text="Cash on delivery. Card acceptance subject to device availability."
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/white"
+                        android:textColorHint="@color/green_A400"
+                        android:textColorLink="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I am over 18, and I agree to the Terms of Use and Privacy Statement." />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/finalsubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/editt2"
+                    android:ems="12"
+                    android:text="CONTINUE"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        >
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    >
+
+</androidx.constraintlayout.widget.ConstraintLayout>

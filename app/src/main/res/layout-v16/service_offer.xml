@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            app:srcCompat="@mipmap/ic_izi" />
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_centerVertical="false"
+            android:layout_marginTop="56dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bookservice"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_above="@id/offerservice"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/signin"
+                android:ems="10"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:maxEms="12"
+                android:padding="5dp"
+                android:text="Sign up"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/offerservice"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_above="@id/_l2"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/signout"
+                android:ems="10"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:maxEms="12"
+                android:padding="5dp"
+                android:text="Sign in"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

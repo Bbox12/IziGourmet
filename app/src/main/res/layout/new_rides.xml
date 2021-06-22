@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:visibility="visible">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        android:id="@+id/cor_home_eats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellow"
+        android:fitsSystemWindows="true">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:visibility="visible"
+            app:expanded="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:fitsSystemWindows="false"
+                app:collapsedTitleGravity="center_vertical|start"
+                app:contentScrim="@color/black"
+                app:expandedTitleGravity="bottom|center_horizontal"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:scrimAnimationDuration="1200"
+                app:titleEnabled="false">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbardd"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@android:color/transparent"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignEnd="@id/_R1"
+                            android:layout_alignParentStart="true"
+                            android:background="@android:color/transparent"
+                            android:gravity="start">
+
+
+                            <TextView
+                                android:id="@+id/past101"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="false"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/roboto_black"
+                                android:text="Your"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/past102"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/past101"
+                                android:layout_centerVertical="false"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/roboto_medium"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/Nscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:addStatesFromChildren="false"
+            android:alwaysDrawnWithCache="false"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top|center_vertical"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/_L1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.8"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:paddingEnd="40dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/past_driver"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="5dp"
+                  />
+
+
+                        <EditText
+                            android:id="@+id/past_name_driver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:padding="5dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="top|center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/deliveredto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="bottom|start"
+                            android:text="Delivered to"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="bottom|start"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/past_car_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@android:color/transparent"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <include
+                    layout="@layout/dialog_bill"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/pending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.8"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_black"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/y5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableStart="@android:drawable/ic_menu_info_details"
+                        android:fontFamily="@font/roboto_black"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:minEms="4"
+                        android:padding="5dp"
+                        android:text="BANK DETAILS"
+                        android:textAllCaps="true"
+                        android:textColor="@color/places_autocomplete_prediction_primary_text_highlight"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/past_booking_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@android:color/transparent"
+                                android:drawableStart="@drawable/green_dot"
+                                android:focusableInTouchMode="false"
+                                android:hint="Booking date"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:padding="5dp"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/ETR"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@android:color/transparent"
+                                android:drawableStart="@drawable/red_dot"
+                                android:focusableInTouchMode="false"
+                                android:hint="Estimated date"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:padding="5dp"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/past_total_delivery_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@android:color/transparent"
+                                android:drawableStart="@drawable/red_dot"
+                                android:focusableInTouchMode="false"
+                                android:hint="Delivery date"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:padding="5dp"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/L5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:divider="@color/black"
+                    android:gravity="start"
+                    android:minHeight="56dp"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp"
+                    android:paddingBottom="3dp">
+
+
+                    <RadioButton
+                        android:id="@+id/orderaccepted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0.25"
+                        android:background="@android:color/transparent"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:ems="6"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical"
+                        android:text="Order Accepted"
+                        android:textColor="@color/quantum_googgreen600"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/green_A400" />
+
+                    <RadioButton
+                        android:id="@+id/confirmorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0.25"
+                        android:background="@android:color/transparent"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:ems="6"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical"
+                        android:text="Order Confirmed"
+                        android:textColor="@color/quantum_googgreen600"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/green_A400" />
+
+                    <RadioButton
+                        android:id="@+id/Order_in_Progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0.25"
+                        android:background="@android:color/transparent"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:ems="6"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical"
+                        android:text="Order in Progress"
+                        android:textColor="@color/quantum_googgreen600"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/_v1"
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/green_A400" />
+
+                    <RadioButton
+                        android:id="@+id/ontheway"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0.25"
+                        android:background="@android:color/transparent"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:ems="6"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical"
+                        android:text="Order on the way"
+                        android:textColor="@color/quantum_googgreen600"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/green_A400" />
+
+                    <RadioButton
+                        android:id="@+id/comming"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0.25"
+                        android:background="@android:color/transparent"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:ems="6"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical"
+                        android:text="Order is arriving. Enjoy!"
+                        android:textColor="@color/quantum_googgreen600"
+                        android:textSize="14sp" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/_titleDescInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="0.3"
+                        android:minHeight="56dp"
+                        android:textColorHint="@color/chef"
+                        android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxBackgroundMode="none"
+                        app:hintTextColor="@color/black">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:cursorVisible="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/roboto_medium"
+                            android:hint="Message"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:lines="3"
+                            android:padding="10dp"
+                            android:textColorHint="@color/chef"
+                            android:textSize="18sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/L6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/driver"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/editTextBackground"
+                            android:ems="10"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:hint="Driver Name"
+                            android:inputType="textNoSuggestions"
+                            android:minHeight="56dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/vehicle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/editTextBackground"
+                            android:ems="10"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:hint="Vehicle No"
+                            android:inputType="textNoSuggestions"
+                            android:minHeight="56dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+
+                        <EditText
+                            android:id="@+id/damt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/editTextBackground"
+                            android:ems="10"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:hint="Enter 0 if no discount"
+                            android:inputType="textNoSuggestions"
+                            android:minHeight="56dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@android:color/darker_gray" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/white"
+                            android:minHeight="56dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.Design.TextInputLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/colorPrimaryDark">
+
+                                <EditText
+                                    android:id="@+id/_date_submit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:background="?attr/editTextBackground"
+                                    android:ems="10"
+                                    android:focusableInTouchMode="false"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:hint="Estimated Date"
+                                    android:inputType="textNoSuggestions|date" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.Design.TextInputLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:textColorHint="@color/colorPrimaryDark">
+
+                                <EditText
+                                    android:id="@+id/_time_submit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.33"
+                                    android:background="?attr/editTextBackground"
+                                    android:ems="10"
+                                    android:focusableInTouchMode="false"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:hint="Estimated Time"
+                                    android:inputType="textNoSuggestions|date" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnUpload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="56dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/button_success"
+                            android:text="Accept Order"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/btnCancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="56dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/button_failed"
+                            android:text="Reject Order"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBarpast"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

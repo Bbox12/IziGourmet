@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+       >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        app:expanded="false">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/collapse_round_corner"
+        android:fillViewport="true"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:scrollbarSize="0dp"
+        android:layout_below="@+id/app_bar_main"
+        android:visibility="visible">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+
+            <RelativeLayout
+                android:id="@+id/_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/dst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:text="Total R "
+                    android:textColor="@color/timestamp"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/canteen_amounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_toEndOf="@+id/dst"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/timestamp"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/_noofItemss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="2dp"
+                    android:gravity="right|center_vertical|end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="no of items"
+                    android:textColor="@color/timestamp"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_margin="3dp"
+                android:background="?attr/editTextBackground"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center_vertical"
+                android:text="Order details"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/moreRvs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:padding="5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="3dp"
+                android:background="?attr/editTextBackground"
+                android:ems="6"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center_horizontal|center"
+                android:text="Billing"
+                android:textColor="@color/timestamp"
+                android:textSize="24sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="top"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toLeftOf="@+id/_tamount"
+                        android:background="@android:color/transparent"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Total Amount"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <EditText
+
+                        android:id="@+id/_tamounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@color/white"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:minEms="4"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="top"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toStartOf="@+id/_damount"
+                        android:background="@android:color/transparent"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Discount"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <EditText
+
+                        android:id="@+id/_damounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@android:color/transparent"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:minEms="4"
+                        android:text="R  0.00"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/black" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="top"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toStartOf="@+id/_payamount"
+                        android:background="@android:color/transparent"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Total Payable Amount"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <EditText
+
+                        android:id="@+id/_payamounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@android:color/transparent"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="start"
+                        android:minEms="4"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/_cancel_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0.5"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_black"
+                        android:gravity="center"
+                        android:minEms="8"
+                        android:padding="15dp"
+                        android:text="Cancel"
+                        android:textColor="@color/red_500"
+                        android:textSize="14sp"
+                        android:typeface="monospace" />
+
+                    <Button
+                        android:id="@+id/_confirm_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="right|end"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/signout"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:minEms="8"
+                        android:padding="15dp"
+                        android:text="Confirm order"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

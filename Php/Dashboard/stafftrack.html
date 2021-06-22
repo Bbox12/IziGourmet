@@ -1,0 +1,331 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Push Notification</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+
+
+
+
+ <script type="text/javascript">
+function myFunction() {
+  var myVarFromPhp = '<?php session_start();echo $_SESSION["email"] ?>';
+  
+  if(myVarFromPhp==''){
+window.location.replace("http://139.59.38.160/Ecosense/Dashboard/page-login.php");
+  }
+};
+</script>
+  <style>
+            #map {
+                height: 100%;
+            }
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #over_map {
+                position: absolute;
+                top: 10px;
+                left: 89%;
+                z-index: 99;
+                background-color: #ccffcc;
+                padding: 10px;
+            }
+        </style>
+</head>
+
+<body onload="myFunction()">
+
+
+    <!-- Left Panel -->
+   <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.php"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+
+                     
+
+                   
+                   <h3 class="menu-title">Operation</h3>
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Staff</a>
+                        <ul class="sub-menu children dropdown-menu">
+                             <li><i class="menu-icon fa fa-th"></i><a href="staff_registration.php">Registration</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="EditStaff.php">Edit</a></li>
+                               <li><i class="menu-icon fa fa-th"></i><a href="DeleteStaff.php">Delete</a></li>
+                        </ul>
+                    </li>
+         
+                      <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list"></i>Policy</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="NewPolicy.php">New</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="UpdatePolicy.php">Update</a></li>
+                        </ul>
+                    </li>
+
+ 
+                      <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-book"></i>Handbook</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="NewHandBook.php">New</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="UpdateHandBook.php">Update</a></li>
+                        
+                        </ul>
+                    </li>
+
+            
+                      <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-medkit"></i>Hailth & Safety</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="HealthSafety.php">New</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="UpdateHealthSafety.php">Update</a></li>
+                        
+                        </ul>
+                    </li>
+
+                 
+    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Staff training</a>
+                        <ul class="sub-menu children dropdown-menu">
+                              <li><i class="menu-icon fa fa-th"></i><a href="StaffTraining.php">New</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="UpdateStaffTraining.php">Update</a></li>
+                           
+                        </ul>
+                    </li>
+
+                     <h3 class="menu-title">Working Site</h3><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="BookingReport.php" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-folder-open"></i>Edit Sites</a>
+                        <ul class="sub-menu children dropdown-menu">
+                        <li><i class="menu-icon fa fa-sign-in"></i><a href="WorkingSites.php">New Sites</a></li>
+                                 <li><i class="menu-icon fa fa-pencil-square-o"></i><a href="EditWorkingSites.php">Edit Sites</a></li>
+                    
+                        
+                        </ul>
+                    </li>
+                       
+                   
+                            <h3 class="menu-title">App Work</h3><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cog"></i>Settings</a>
+                        <ul class="sub-menu children dropdown-menu">
+                        <li><i class="menu-icon fa fa-sign-in"></i><a href="PushNotification.php">Push Notification</a></li>
+                                 <li><i class="menu-icon fa fa-pencil-square-o"></i><a href="stafftracker.html">Google Map Track</a></li>
+                    
+                        
+                        </ul>
+                    </li>
+
+                     <h3 class="menu-title">Reports</h3><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="BookingReport.php" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-folder-open"></i>Report</a>
+                       
+                    </li>
+  <h3 class="menu-title">Extras</h3><!-- /.menu-title -->
+                    <li class="menu ">
+                        <a href="page-login.php" ><i class="menu-icon fa fa-sign-out"></i> LOGOUT</a>
+                       
+                    </li>      
+                </ul>
+            </div>
+        </nav>
+    </aside>
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+   <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i>
+                            
+                            </button>
+                           
+                        </div>
+
+                        <div class="dropdown for-message">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                id="message"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="ti-email"></i>
+                            
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="message">
+                                <p class="red">You have no Mails</p>
+                               
+                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                           <a href="page-login.php" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php  session_start(); echo $_SESSION["email"]."|".$_SESSION["name"];?></a>
+                        </a>
+                    </div>
+                </div>
+          </div>
+
+        </header>
+      
+
+                                          <div class="content mt-3">
+            <div class="animated fadeIn">
+              <div id="map"></div>
+
+        <div id="over_map">
+            <div>
+                <span>Online Staff: </span><span id="staff">0</span>
+            </div>
+        </div>
+ </div>
+</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+        <script>
+            // Replace your Configuration here..
+            var config = {
+                apiKey: "AIzaSyAABTMu2jNqK0prW-YHz6DojBJUkXBHRuU",
+    databaseURL: "https://ecosense-61494.firebaseio.com/",
+    projectId: "ecosense-61494",
+            };
+            firebase.initializeApp(config);
+        </script>
+
+        <script>
+            // counter for online cars...
+            var staffcount = 0;
+            // markers array to store all the markers, so that we could remove marker when any car goes offline and its data will be remove from realtime database...
+            var markers = [];
+            var map;
+            function initMap() { // Google Map Initialization... 
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 16,
+                    center: new google.maps.LatLng(51.449907, 0.0623659),
+                    mapTypeId: 'terrain'
+                });
+            }
+            // This Function will create a car icon with angle and add/display that marker on the map
+            function AddStaff(data) {
+             
+                    var image = 'http://139.59.38.160/Ecosense/Dashboard/marker.png';
+      
+                    var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Staff Name</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Name </b>'+ data.val().Name
+      '</div>'+
+      '</div>';
+
+ var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(data.val().Latitude, data.val().Longitude),
+                    icon: image,
+                    map: map
+                });
+                markers[data.key] = marker; // add marker in the markers array...
+                document.getElementById("staff").innerHTML = staffcount;
+                 marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+            }
+            // get firebase database reference...
+            var staff_ref =  firebase.database().ref('Staff');
+  staff_ref.once('value', function(childSnapshot) {
+
+  childSnapshot.forEach(function(snapshot) {
+
+       staffcount++;
+      
+                  AddStaff(snapshot);
+
+        
+          });
+        });
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb6UvG2xlkK6XS81n6b0J4QtO7I4Z9KXE&callback=initMap">
+        </script>
+      
+      
+ 
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_grey_900"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:expanded="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:drawable/screen_background_dark_transparent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_scrollFlags="enterAlways"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center_horizontal">
+
+
+                        <TextView
+                            android:id="@+id/s"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_horizontal"
+                            android:text="@string/app_name"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="56dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_horizontal|center"
+                            android:padding="3dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/rmap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                map:cameraZoom="18"
+                map:mapType="normal" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar3_map"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="false"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/myLocationCustomButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_above="@+id/linearLayout"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="false"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="25dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_location"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/myTrackButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_location"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textnoOwner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="56dp"
+            android:layout_weight="0.50"
+            android:background="@color/red_A700"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical|center"
+            android:text="You are not appointed by any owner"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ride_later"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.50"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:minHeight="56dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="0.50"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="right"
+                    android:text="Go"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
+                    android:text="Offline"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ride_now"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="0.50"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="0.50"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="right"
+                    android:text="Go"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
+                    android:text="Online"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/bottom_sheet_3"
+        android:visibility="gone" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

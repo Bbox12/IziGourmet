@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@android:color/transparent"
+    android:gravity="center_vertical|center"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/my_service_all"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/editTextBackground"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/layoutTop"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/rmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="1dp"
+        android:layout_weight="0.5"
+        android:background="@android:color/transparent"
+        android:padding="2dp"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/all_fragment_rv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:scrollbars="vertical" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

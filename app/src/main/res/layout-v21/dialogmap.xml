@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout
+        android:id="@+id/rmap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="false"
+            map:cameraZoom="18"
+            map:mapType="normal">
+
+        </fragment>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            app:expanded="false">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+            android:fontFamily="@font/roboto_medium"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/it"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_pin_green"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/myLocationCustomButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_above="@+id/ride_detail"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_centerVertical="false"
+            android:layout_margin="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="80dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_location"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/progressBar3_map"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="false"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/bottom_sheet_2"
+        android:visibility="gone" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

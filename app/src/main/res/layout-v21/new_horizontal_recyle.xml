@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="20dp"
+    android:background="@android:color/transparent"
+    android:elevation="3dp"
+    card_view:cardBackgroundColor="@color/chef"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="0dp"
+    card_view:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:minHeight="128dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top|left"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:minHeight="128dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@color/black"
+                card_view:cardCornerRadius="12dp">
+
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/service_pic"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/black"
+                    android:scaleType="fitXY"
+                    android:scrollbarSize="0dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/outofstock"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="false"
+                android:background="@color/white"
+                android:ems="6"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Out of stock"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@android:color/transparent"
+            android:minHeight="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/_name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start|top"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/_details1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start|top"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:minHeight="32dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/flavour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/imagebackground"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:minEms="4"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/slide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/imagebackground"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:minEms="4"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:id="@+id/discount_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="false"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:lines="1"
+                    android:minWidth="100dp"
+                    android:textColor="@color/blue_grey_200"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/_L1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="false"
+                    android:layout_toStartOf="@id/outofstock"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/price_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:ems="6"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:lines="1"
+                        android:minHeight="32dp"
+                        android:singleLine="true"
+                        android:textColor="@color/blue_grey_800"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/V1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="2dp"
+                        android:background="@color/brown_700" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="start|center_vertical"
+                        android:minHeight="32dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/discountprice_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+
+                            android:background="@android:color/transparent"
+                            android:ems="6"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_horizontal|top"
+                            android:minEms="4"
+                            android:textColor="@color/blue_grey_400"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <View
+                            android:id="@+id/V2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:layout_alignParentLeft="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerVertical="true"
+                            android:background="@color/quantum_googred700"
+                            android:foregroundGravity="center_vertical" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/_rrr1"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="false"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/button2_minus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:scaleType="fitCenter"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:src="@mipmap/ic_neg"
+                    android:text="Button"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+
+                <EditText
+                    android:id="@+id/rate_km1"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="0.33"
+                    android:background="@color/white"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal|center"
+                    android:inputType="textPersonName"
+                    android:maxWidth="36dp"
+                    android:maxHeight="36dp"
+                    android:minEms="2"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+
+                <ImageButton
+                    android:id="@+id/button2_add1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:scaleType="fitCenter"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:src="@mipmap/ic_add"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

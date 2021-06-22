@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+
+    <ProgressBar
+        android:id="@+id/progressBarprofile"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:visibility="visible" />
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:stateListAnimator="@null"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:src="@drawable/quantum_ic_arrow_back_grey600_24" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.6"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="start|center_vertical"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:padding="5dp"
+                android:textColor="@android:color/transparent"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:clipToPadding="false"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/_i4"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/cart" />
+
+                <TextView
+                    android:id="@+id/orders"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@id/_i4"
+                    android:layout_gravity="right|end|top"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/badge_background"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/_nscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar_main"
+        android:background="@drawable/leftcornerbackground"
+        android:fillViewport="true"
+        android:paddingTop="0dp"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="1dp"
+                    app:contentPadding="0.5dp">
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/img_profil_update"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+                    <ImageView
+                        android:id="@+id/edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="false"
+                        android:layout_gravity="bottom|end"
+                        android:layout_weight="0.5"
+                        android:background="@color/black"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:src="@android:drawable/ic_menu_edit" />
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/otp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="end"
+                    android:textColorHint="@color/timestamp"
+                    app:boxBackgroundMode="outline">
+
+                    <EditText
+                        android:id="@+id/editText_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/editTextBackground"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Name"
+                        android:inputType="textNoSuggestions"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="end"
+                    android:textColorHint="@color/timestamp"
+                    app:boxBackgroundMode="outline">
+
+
+                    <EditText
+                        android:id="@+id/editText_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/editTextBackground"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Mobile No"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp"
+                        tools:ignore="RtlHardcoded" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="end"
+                    android:textColorHint="@color/timestamp"
+                    app:boxBackgroundMode="outline">
+
+                    <EditText
+                        android:id="@+id/editText_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/editTextBackground"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:layout_margin="2dp"
+                            android:layout_weight="0.40"
+                            android:background="@color/grey_400" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
+                            android:text="Address"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="normal" />
+
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:layout_margin="2dp"
+                            android:layout_weight="0.40"
+                            android:background="@color/grey_400" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/pagerback"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.Design.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:textColorHint="@color/timestamp"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/faddresso"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/editTextBackground"
+                                android:ems="20"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Street Address"
+                                android:inputType="textMultiLine|textPersonName"
+                                android:textColor="@color/black"
+                                android:textColorHighlight="@color/top"
+                                android:textColorHint="@color/timestamp"
+                                android:textColorLink="@color/top"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.Design.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:background="@android:color/transparent"
+                            android:textColorHint="@color/timestamp"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/cityo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/editTextBackground"
+                                android:ems="10"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="City"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:textColorHighlight="@color/top"
+                                android:textColorHint="@color/timestamp"
+                                android:textColorLink="@color/top"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.Design.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:background="@android:color/transparent"
+                            android:textColorHint="@color/timestamp"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/stateo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/editTextBackground"
+                                android:ems="10"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Province"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:textColorHighlight="@color/top"
+                                android:textColorHint="@color/top"
+                                android:textColorLink="@color/top"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.Design.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:background="@android:color/transparent"
+                            android:textColorHint="@color/timestamp"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/countryo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/editTextBackground"
+                                android:ems="10"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Country"
+                                android:inputType="textPersonName"
+                                android:text="South Africa"
+                                android:textColor="@color/black"
+                                android:textColorHighlight="@color/top"
+                                android:textColorHint="@color/top"
+                                android:textColorLink="@color/top"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.Design.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:textColorHint="@color/timestamp"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/pino"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?attr/editTextBackground"
+                                android:ems="15"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Postal zip code"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:textColorHighlight="@color/top"
+                                android:textColorHint="@color/top"
+                                android:textColorLink="@color/top"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/button_success"
+                    android:elevation="20dp"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="SAVE"
+                    android:textColor="@color/white"
+                    android:theme="@style/Widget.AppCompat.Button.Borderless.Colored" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

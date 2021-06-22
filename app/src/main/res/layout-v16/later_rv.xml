@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/placeholder_bg"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/placeholder_bg"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ride_date_later"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="left|center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ride_time_later"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="right|center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/rl4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/Sl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="start|center_vertical"
+                    android:maxEms="1"
+                    android:minEms="1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="@android:color/transparent"
+                    android:ems="6"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:singleLine="true"
+                    android:text="Product"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/venue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:ems="6"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:inputType="textMultiLine"
+                    android:text="No of Items"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.33"
+                    android:background="@android:color/transparent"
+                    android:ems="6"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:singleLine="true"
+                    android:text="Price"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/button2_plus"
+                    android:layout_width="22dp"
+                    android:layout_height="29dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="7dp"
+                    android:adjustViewBounds="false"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="2dp"
+                    android:paddingStart="3dp"
+                    android:paddingLeft="3dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/moreRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:padding="5dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pending"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center|center_vertical"
+                android:maxEms="1"
+                android:minEms="1"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center|center_vertical"
+                android:maxEms="1"
+                android:minEms="1"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="top|end"
+                android:layout_marginEnd="1dp"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/ic_web"
+                android:ems="6"
+                android:fontFamily="@font/roboto_black"
+                android:text="Details"
+                android:textColor="@color/timestamp"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

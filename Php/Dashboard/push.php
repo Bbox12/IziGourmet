@@ -1,0 +1,47 @@
+
+<?php
+ 
+
+class Push {
+ 
+    // push message title
+    private $title;
+    private $message;
+    private $image;
+    private $is_background;
+       private $unique;
+ 
+    function __construct() {
+         
+    }
+ 
+    public function setTitle($title) {
+        $this->title = $title;
+    }
+ 
+    public function setMessage($message) {
+        $this->message = $message;
+    }
+ 
+    public function setImage($imageUrl) {
+        $this->image = $imageUrl;
+    }
+  public function setunique($unique) {
+        $this->unique = $unique;
+    }
+ 
+    
+    public function setIsBackground($is_background) {
+        $this->is_background = $is_background;
+    }
+ 
+    public function getPush() {
+        $res = array();
+        $res['data']['title'] = $this->title;
+        $res['data']['is_background'] = $this->is_background;
+        $res['data']['message'] = $this->message;
+        $res['data']['timestamp'] = date('Y-m-d H:i:s');
+        return $res;
+    }
+ 
+}

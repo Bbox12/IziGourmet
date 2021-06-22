@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "440085960172",
+    "project_id": "fourth-caster-305809",
+    "storage_bucket": "fourth-caster-305809.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440085960172:android:dd06d12d412f3f9b84dcc9",
+        "android_client_info": {
+          "package_name": "com.liteafrica.izigourmet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440085960172-ticaivdm7kh0dptqn471bh20mrcr0fgi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.liteafrica.izigourmet",
+            "certificate_hash": "6584623ee4d832bac11820ce19f29e2f94e07a56"
+          }
+        },
+        {
+          "client_id": "440085960172-q5k74h1naaqi9mttpt5otrqi7j0oj052.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPVGAxyBB6-auiKFI2DU2R3po-J55OhVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440085960172-q5k74h1naaqi9mttpt5otrqi7j0oj052.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
